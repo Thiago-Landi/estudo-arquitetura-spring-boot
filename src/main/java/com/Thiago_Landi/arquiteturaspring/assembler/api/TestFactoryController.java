@@ -1,7 +1,6 @@
 package com.Thiago_Landi.arquiteturaspring.assembler.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +16,8 @@ import com.Thiago_Landi.arquiteturaspring.assembler.Key;
 public class TestFactoryController {
 
 	@Autowired
-	@Qualifier("engineElectric")
+	//@Qualifier("engineElectric")
+	@Aspirated
 	private Engine engine;
 	
 	@PostMapping

@@ -2,6 +2,7 @@ package com.Thiago_Landi.arquiteturaspring.assembler.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import com.Thiago_Landi.arquiteturaspring.assembler.Engine;
 import com.Thiago_Landi.arquiteturaspring.assembler.TypeEngine;
@@ -31,6 +32,7 @@ public class AssemblerConfiguration {
 	        return engine;
 	    }
 
+	    @Primary
 	    @Bean(name = "engineTurbo")
 	    public Engine EngineTurbo(){
 	        var engine = new Engine();
